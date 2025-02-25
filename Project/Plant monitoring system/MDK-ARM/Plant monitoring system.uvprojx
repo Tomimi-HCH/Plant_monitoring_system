@@ -530,6 +530,16 @@
               <FileType>1</FileType>
               <FilePath>..\ModuleDiver\ring_buffer.c</FilePath>
             </File>
+            <File>
+              <FileName>ascii_font.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ModuleDiver\ascii_font.c</FilePath>
+            </File>
+            <File>
+              <FileName>driver_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\ModuleDiver\driver_i2c.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

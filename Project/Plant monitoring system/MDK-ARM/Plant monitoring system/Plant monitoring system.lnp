@@ -16,6 +16,8 @@
 "plant monitoring system\key.o"
 "plant monitoring system\driver_usart.o"
 "plant monitoring system\ring_buffer.o"
+"plant monitoring system\ascii_font.o"
+"plant monitoring system\driver_i2c.o"
 "plant monitoring system\stm32f1xx_hal_gpio_ex.o"
 "plant monitoring system\stm32f1xx_hal_spi.o"
 "plant monitoring system\stm32f1xx_hal.o"
