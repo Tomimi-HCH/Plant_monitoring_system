@@ -1,5 +1,6 @@
 plant monitoring system\oled.o: ..\ModuleDiver\OLED.c
 plant monitoring system\oled.o: ..\ModuleDiver\OLED.h
+plant monitoring system\oled.o: ../Core/Inc/main.h
 plant monitoring system\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 plant monitoring system\oled.o: ../Core/Inc/stm32f1xx_hal_conf.h
 plant monitoring system\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h
@@ -27,7 +28,6 @@ plant monitoring system\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ha
 plant monitoring system\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 plant monitoring system\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 plant monitoring system\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-plant monitoring system\oled.o: ../Core/Inc/spi.h
-plant monitoring system\oled.o: ../Core/Inc/main.h
 plant monitoring system\oled.o: ../ModuleDiver/ring_buffer.h
-plant monitoring system\oled.o: ..\ModuleDiver\ascii_font.c
+plant monitoring system\oled.o: ../Core/Inc/spi.h
+plant monitoring system\oled.o: C:\D zone software\MCU\Keil5_MDK_C51\Keil_MDK\ARM\ARMCC\Bin\..\include\stdlib.h
