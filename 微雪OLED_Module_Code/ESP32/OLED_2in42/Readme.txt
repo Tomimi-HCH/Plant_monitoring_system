@@ -1,0 +1,13 @@
+ESP32
+
+SPI:	
+	DIN	11	
+	CLK	12
+
+IIC：         
+	DIN	SDA(ESP32-S3 17)
+	CLK	SCL (ESP32-S3 16)
+
+	CS	10
+	DC	46
+	RST	3
