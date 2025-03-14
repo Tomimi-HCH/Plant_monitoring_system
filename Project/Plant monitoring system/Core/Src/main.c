@@ -18,7 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "dma.h"
 #include "spi.h"
 #include "usart.h"
 #include "gpio.h"
@@ -28,6 +27,10 @@
 #include "LED.h"
 #include "KEY.h"
 #include "driver_usart.h"
+#include <stdio.h>
+#include "OLED.h"
+#include "driver_i2c.h"
+#include "bh1750.h"
 
 
 /* USER CODE END Includes */
@@ -62,6 +65,8 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 ring_buffer test_buffer;
+char buf[] = "halloworld";
+float lux = 0;
 
 
 /* USER CODE END 0 */
@@ -97,12 +102,19 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_DMA_Init();
   MX_SPI1_Init();
   MX_USART1_UART_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-  
+	OLED_Init();
+	I2C_GPIO_ReInit();
+	BH1750_Init();
+	
+	//OLED_Clear();
+	OLED_PutChar(0, 0, 'A');
+	OLED_PutChar(0, 16, 'Y');
+	OLED_PutChar(0,1,'A');
+	OLED_PrintString(2, 0, "Hello World!");
 	
 
   /* USER CODE END 2 */
@@ -114,6 +126,11 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+
+
+	lux = BH1750_ReadLightLevel();
+	printf("illumination intensity= %.2f lx\r\n",lux);
+	 HAL_Delay(1000);
 	  
 
 	  

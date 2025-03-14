@@ -29,4 +29,4 @@ uint8_t SGP30_Read(SGP30_Data *data);
 }
 #endif
 
-#endif /* __SGP30_H__ */0
+#endif /* __SGP30_H__ */

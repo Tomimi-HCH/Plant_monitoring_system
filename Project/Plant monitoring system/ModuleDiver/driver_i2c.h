@@ -22,6 +22,7 @@
 #define SDA_L           HAL_GPIO_WritePin(SDA_PORT, SDA_PIN, (GPIO_PinState)0)
 #define SDA_IN          HAL_GPIO_ReadPin(SDA_PORT, SDA_PIN)
 
+
 /*
  *  函数名：I2C_GPIO_ReInit
  *  功能描述：将模拟I2C的SCL和SDA引脚进行重新初始化

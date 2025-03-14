@@ -74,17 +74,9 @@ int fgetc(FILE *f)
  *  输入参数：无
  *  输出参数：无
  *  返回值：无
+	* stm32f1xx_it.c
 */
-void USART1_IRQHandler(void)
-{
-    unsigned char c = 0;
-    if((USART1->SR &(1<<5)) != 0)   // 判断USART1的状态寄存器的第五位即RXNE位是否被置位
-    {
-        c = USART1->DR; // RXNE=1，表明DR寄存器有值，就将它读出来保存到临时变量中；
-        ring_buffer_write(c, &test_buffer); // 将数据保存到环形缓冲区中
-    }
-    HAL_UART_IRQHandler(&huart1);   // HAL库中的UART统一中断服务函数，通过形参判断是要处理谁的中断
-}
+
 
 /*
  *  函数名：HAL_UART_RxCpltCallback

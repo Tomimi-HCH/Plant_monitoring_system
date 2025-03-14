@@ -28,10 +28,13 @@ plant monitoring system\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ha
 plant monitoring system\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 plant monitoring system\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 plant monitoring system\main.o: ../ModuleDiver/ring_buffer.h
-plant monitoring system\main.o: ../Core/Inc/dma.h
 plant monitoring system\main.o: ../Core/Inc/spi.h
 plant monitoring system\main.o: ../Core/Inc/usart.h
 plant monitoring system\main.o: ../Core/Inc/gpio.h
 plant monitoring system\main.o: ../ModuleDiver/LED.h
 plant monitoring system\main.o: ../ModuleDiver/KEY.h
 plant monitoring system\main.o: ../ModuleDiver/driver_usart.h
+plant monitoring system\main.o: C:\D zone software\MCU\Keil5_MDK_C51\Keil_MDK\ARM\ARMCC\Bin\..\include\stdio.h
+plant monitoring system\main.o: ../ModuleDiver/OLED.h
+plant monitoring system\main.o: ../ModuleDiver/driver_i2c.h
+plant monitoring system\main.o: ../ModuleDiver/bh1750.h

@@ -1,5 +1,0 @@
-{
-    "port": "COM43",
-    "board": "arduino:avr:uno",
-    "sketch": "OLED_0in96_rgb.ino"
-}

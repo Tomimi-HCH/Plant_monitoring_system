@@ -55,7 +55,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern DMA_HandleTypeDef hdma_spi1_tx;
+extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart3;
 /* USER CODE BEGIN EV */
 
@@ -200,17 +200,22 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-  * @brief This function handles DMA1 channel3 global interrupt.
+  * @brief This function handles USART1 global interrupt.
   */
-void DMA1_Channel3_IRQHandler(void)
+void USART1_IRQHandler(void)
 {
-  /* USER CODE BEGIN DMA1_Channel3_IRQn 0 */
+  /* USER CODE BEGIN USART1_IRQn 0 */
+	unsigned char c = 0;
+    if((USART1->SR &(1<<5)) != 0)   // 判断USART1的状态寄存器的第五位即RXNE位是否被置位
+    {
+        c = USART1->DR; // RXNE=1，表明DR寄存器有值，就将它读出来保存到临时变量中�?
+        ring_buffer_write(c, &test_buffer); // 将数据保存到环形缓冲区中
+    }
+  /* USER CODE END USART1_IRQn 0 */
+  HAL_UART_IRQHandler(&huart1);
+  /* USER CODE BEGIN USART1_IRQn 1 */
 
-  /* USER CODE END DMA1_Channel3_IRQn 0 */
-  HAL_DMA_IRQHandler(&hdma_spi1_tx);
-  /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
-
-  /* USER CODE END DMA1_Channel3_IRQn 1 */
+  /* USER CODE END USART1_IRQn 1 */
 }
 
 /**

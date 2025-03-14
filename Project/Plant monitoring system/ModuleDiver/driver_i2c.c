@@ -29,7 +29,7 @@ void I2C_GPIO_ReInit(void)
     HAL_GPIO_DeInit(SCL_PORT, SCL_PIN);
     HAL_GPIO_DeInit(SDA_PORT, SDA_PIN);
     
-    /* 3. 使能SCL和SDA的GPIO的时钟，因为他们都是GPIOF组的，所以这里只使能GPIOF的时钟 */
+    /* 3. 使能SCL和SDA的GPIO的时钟，因为他们都是GPIOB组的，所以这里只使能GPIOF的时钟 */
     __HAL_RCC_GPIOB_CLK_ENABLE();
     
     /* 4. 设置GPIO的模式为开漏输出模式，响应速度设置为快速响应 */

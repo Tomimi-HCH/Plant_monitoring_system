@@ -1,9 +1,0 @@
-使用方法：
-
-1.将U8glib.zip放到arduino库目录下解压
-2.打开U8gLogo.ino程序
-
-
-接线方式：
-   六针SPI Com: SCK = 13, MOSI = 11, CS = 10, DC = 9
-   七针SPI Com: SCK = 13, MOSI = 11, CS = 10, DC = 9  RES=RESTE
