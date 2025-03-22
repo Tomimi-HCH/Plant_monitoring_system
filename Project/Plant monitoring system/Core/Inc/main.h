@@ -69,6 +69,10 @@ void Error_Handler(void);
 #define OLED_DC_GPIO_Port GPIOA
 #define OLED_MOSI_Pin GPIO_PIN_7
 #define OLED_MOSI_GPIO_Port GPIOA
+#define RAIN_Pin GPIO_PIN_0
+#define RAIN_GPIO_Port GPIOB
+#define SoilH_Pin GPIO_PIN_1
+#define SoilH_GPIO_Port GPIOB
 #define USART3_TX_Pin GPIO_PIN_10
 #define USART3_TX_GPIO_Port GPIOB
 #define USART3_RX_Pin GPIO_PIN_11
@@ -81,12 +85,10 @@ void Error_Handler(void);
 #define K1_GPIO_Port GPIOB
 #define K2_Pin GPIO_PIN_7
 #define K2_GPIO_Port GPIOB
-/*
 #define SCL_Pin GPIO_PIN_8
 #define SCL_GPIO_Port GPIOB
 #define SDA_Pin GPIO_PIN_9
 #define SDA_GPIO_Port GPIOB
-*/
 
 /* USER CODE BEGIN Private defines */
 
